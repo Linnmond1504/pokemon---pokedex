@@ -1,12 +1,12 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter } from 'react-router-dom'  // <-- Importá BrowserRouter
+import { BrowserRouter } from 'react-router-dom'
 import './index.css'
 import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter basename="/pokemon---pokedex"> {/* <-- Agregá basename */}
+    <BrowserRouter basename="/pokemon---pokedex">
       <App />
     </BrowserRouter>
   </StrictMode>,
