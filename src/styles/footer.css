@@ -1,0 +1,510 @@
+/* src/styles/Footer.css - Versión Simplificada */
+
+:root {
+  --footer-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --pokemon-yellow: #ffcb05;
+  --pokemon-blue: #3b82f6;
+  --pokemon-red: #ef4444;
+  --footer-text: #e2e8f0;
+  --footer-text-light: #cbd5e1;
+  --card-bg: rgba(255, 255, 255, 0.1);
+  --hover-bg: rgba(255, 255, 255, 0.15);
+  --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.1);
+  --shadow-strong: 0 8px 32px rgba(0, 0, 0, 0.3);
+  --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Footer Principal */
+.footer-enhanced {
+  background: var(--footer-gradient);
+  color: var(--footer-text);
+  position: relative;
+  margin-top: auto;
+  overflow: hidden;
+  min-height: 400px;
+}
+
+/* Scroll to Top Button */
+.scroll-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 60px;
+  height: 60px;
+  background: var(--pokemon-yellow);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-strong);
+  transition: var(--transition-smooth);
+  z-index: 1000;
+}
+
+.scroll-to-top:hover {
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 15px 35px rgba(255, 203, 5, 0.4);
+}
+
+.scroll-icon {
+  font-size: 1.5rem;
+  transition: var(--transition-smooth);
+}
+
+.scroll-to-top:hover .scroll-icon {
+  transform: translateY(-3px);
+}
+
+/* Container */
+.footer-container-enhanced {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 4rem 2rem 0;
+  position: relative;
+  z-index: 2;
+}
+
+/* Main Content */
+.footer-main {
+  margin-bottom: 3rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+
+/* Section Styles */
+.footer-section {
+  opacity: 0;
+  animation: slideInUp 0.8s ease forwards;
+}
+
+.footer-section:nth-child(1) { animation-delay: 0.1s; }
+.footer-section:nth-child(2) { animation-delay: 0.2s; }
+.footer-section:nth-child(3) { animation-delay: 0.3s; }
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: var(--pokemon-yellow);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.section-icon {
+  font-size: 1.5rem;
+}
+
+/* Brand Section */
+.brand-section {
+  grid-column: span 1;
+}
+
+.footer-brand-enhanced {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.brand-logo-enhanced {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.brand-icon-large {
+  font-size: 3.5rem;
+  filter: drop-shadow(0 0 20px rgba(255, 203, 5, 0.5));
+}
+
+.brand-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name-enhanced {
+  font-size: 2.2rem;
+  font-weight: 800;
+  background: linear-gradient(45deg, var(--pokemon-yellow), #ffd93d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.brand-tagline {
+  color: var(--footer-text-light);
+  font-size: 0.9rem;
+  font-style: italic;
+  margin-top: 0.2rem;
+}
+
+.brand-description-enhanced {
+  line-height: 1.7;
+  color: var(--footer-text-light);
+  font-size: 1rem;
+}
+
+/* Social Section */
+.social-section {
+  margin-top: 2rem;
+}
+
+.social-title {
+  color: var(--pokemon-yellow);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.social-links-enhanced {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.social-link-enhanced {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: var(--card-bg);
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  overflow: visible;
+}
+
+.social-link-enhanced:hover {
+  background: var(--hover-color, var(--pokemon-yellow));
+  color: #333;
+  transform: translateY(-8px) scale(1.2);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  border-color: var(--hover-color, var(--pokemon-yellow));
+}
+
+.social-icon-enhanced {
+  font-size: 1.4rem;
+  transition: var(--transition-smooth);
+}
+
+.social-tooltip {
+  position: absolute;
+  bottom: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: var(--transition-smooth);
+}
+
+.social-link-enhanced:hover .social-tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-5px);
+}
+
+/* Links Section */
+.footer-links-enhanced {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.footer-link-enhanced {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.8rem;
+  color: var(--footer-text-light);
+  text-decoration: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  transition: var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-link-enhanced::before {
+  content: '';
+  position: absolute;
+  left: -100%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.6s ease;
+}
+
+.footer-link-enhanced:hover::before {
+  left: 100%;
+}
+
+.footer-link-enhanced:hover {
+  color: var(--pokemon-yellow);
+  background: var(--hover-bg);
+  transform: translateX(10px);
+  box-shadow: var(--shadow-soft);
+}
+
+.link-icon {
+  font-size: 1.2rem;
+  transition: var(--transition-smooth);
+}
+
+.link-text {
+  flex: 1;
+  font-weight: 500;
+}
+
+.link-arrow {
+  opacity: 0;
+  transition: var(--transition-smooth);
+}
+
+.footer-link-enhanced:hover .link-icon {
+  transform: scale(1.2);
+}
+
+.footer-link-enhanced:hover .link-arrow {
+  opacity: 1;
+  transform: translateX(5px);
+}
+
+/* Tech Section */
+.tech-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.tech-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--card-bg);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: var(--transition-smooth);
+}
+
+.tech-item:hover {
+  background: var(--hover-bg);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-soft);
+}
+
+.tech-icon {
+  font-size: 1.5rem;
+}
+
+.tech-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.tech-name {
+  font-weight: 600;
+  color: var(--footer-text);
+}
+
+.tech-version {
+  font-size: 0.85rem;
+  color: var(--pokemon-yellow);
+}
+
+/* Footer Bottom */
+.footer-bottom-enhanced {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 2rem 0 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  margin-top: 2rem;
+}
+
+.footer-bottom-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 0 2rem;
+}
+
+.copyright-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.copyright-text {
+  color: var(--footer-text);
+  font-size: 0.9rem;
+  margin: 0;
+  font-weight: 500;
+}
+
+.pokemon-copyright {
+  color: var(--footer-text-light);
+  font-size: 0.8rem;
+  margin: 0;
+  font-style: italic;
+}
+
+.footer-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-end;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--footer-text-light);
+  font-size: 0.85rem;
+}
+
+.meta-icon {
+  font-size: 1rem;
+}
+
+/* Footer Wave Animation */
+.footer-wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.footer-wave svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 60px;
+}
+
+.footer-wave path {
+  fill: rgba(255, 255, 255, 0.05);
+}
+
+/* Animaciones */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .footer-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-container-enhanced {
+    padding: 3rem 1rem 0;
+  }
+  
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .brand-logo-enhanced {
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .brand-name-enhanced {
+    font-size: 1.8rem;
+  }
+  
+  .footer-bottom-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 0 1rem;
+  }
+  
+  .footer-meta {
+    align-items: center;
+  }
+  
+  .scroll-to-top {
+    bottom: 1rem;
+    right: 1rem;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .social-links-enhanced {
+    gap: 0.8rem;
+  }
+  
+  .social-link-enhanced {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container-enhanced {
+    padding: 2rem 0.5rem 0;
+  }
+  
+  .brand-icon-large {
+    font-size: 2.5rem;
+  }
+  
+  .brand-name-enhanced {
+    font-size: 1.5rem;
+  }
+  
+  .section-title {
+    font-size: 1.1rem;
+    justify-content: center;
+  }
+  
+  .social-links-enhanced {
+    justify-content: center;
+  }
+}

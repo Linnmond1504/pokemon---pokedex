@@ -1,0 +1,277 @@
+/* src/styles/Card.css */
+
+.pokemon-card {
+  width: 100%;
+  height: 350px;
+  perspective: 1000px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.pokemon-card:hover {
+  transform: translateY(-10px);
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.pokemon-card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  border: 2px solid #e2e8f0;
+  transition: var(--transition);
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.pokemon-card:hover .card-front,
+.pokemon-card:hover .card-back {
+  box-shadow: var(--box-shadow-hover);
+  border-color: var(--primary-color);
+}
+
+/* Card Header */
+.card-header {
+  background: var(--gradient-primary);
+  padding: 1rem;
+  position: relative;
+}
+
+.pokemon-id {
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* imagen de pokemon */
+.pokemon-image-container {
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  position: relative;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pokemon-image {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  transition: var(--transition);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.pokemon-card:hover .pokemon-image {
+  transform: scale(1.1);
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2));
+}
+
+.image-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  background: #f1f5f9;
+  border-radius: 50%;
+  color: #64748b;
+  font-size: 0.9rem;
+  border: 2px dashed #cbd5e1;
+}
+
+/* card */
+.card-body {
+  padding: 1.5rem;
+}
+
+.pokemon-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--dark-color);
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+}
+
+/* Pokemon Types */
+.pokemon-types {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.type-badge {
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  transition: var(--transition);
+}
+
+.type-badge:hover {
+  transform: scale(1.05);
+}
+
+/* estilos card de stats */
+.card-back .card-body {
+  background: var(--gradient-primary);
+  color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+}
+
+.pokemon-stats {
+  text-align: left;
+  margin: 1.5rem 0;
+}
+
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.stat-item:last-child {
+  border-bottom: none;
+}
+
+.stat-label {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.stat-value {
+  font-weight: 400;
+  font-size: 0.9rem;
+  text-transform: capitalize;
+}
+
+/* Animacion */
+.pokemon-card {
+  animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes cardFlip {
+  0% {
+    transform: rotateY(0);
+  }
+  100% {
+    transform: rotateY(180deg);
+  }
+}
+
+.pokemon-card.flipped .card-inner {
+  animation: cardFlip 0.8s ease-in-out;
+}
+
+/* efecto */
+/* 
+.pokemon-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s;
+  z-index: 1;
+  border-radius: var(--border-radius);
+}
+
+.pokemon-card:hover::before {
+  transform: translateX(100%);
+}
+*/
+
+/* NUEVO: Efecto hover más simple y confiable */
+.pokemon-card:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+.pokemon-card:active {
+  transform: translateY(-5px) scale(1.01);
+  transition: transform 0.1s ease;
+}
+
+/* Mejorar la respuesta visual al clic */
+.pokemon-card:hover .card-front,
+.pokemon-card:hover .card-back {
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  border-color: var(--primary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .pokemon-card {
+    height: 320px;
+  }
+  
+  .pokemon-image-container {
+    height: 150px;
+    padding: 1rem;
+  }
+  
+  .pokemon-image {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .pokemon-name {
+    font-size: 1.2rem;
+  }
+  
+  .card-body {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .pokemon-card {
+    height: 300px;
+  }
+  
+  .pokemon-image-container {
+    height: 130px;
+  }
+  
+  .pokemon-image {
+    width: 90px;
+    height: 90px;
+  }
+  
+  /* En móvil, hacer el efecto hover menos pronunciado */
+  .pokemon-card:hover {
+    transform: translateY(-5px) scale(1.01);
+  }
+}
