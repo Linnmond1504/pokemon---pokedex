@@ -13,16 +13,16 @@ const Gallery = ({
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedType, setSelectedType] = useState('all');
   
-  // Determinar si necesitamos cargar todos los Pokémon (cuando hay filtros activos)
+  
   const hasActiveFilters = searchTerm.trim() !== '' || selectedType !== 'all';
   
   const { pokemon, loading, error, totalCount } = usePokemon(
     currentPage, 
     itemsPerPage, 
-    hasActiveFilters // loadAll = true cuando hay filtros
+    hasActiveFilters 
   );
   
-  // Filtrar Pokémon por búsqueda y tipo
+  
   const filteredPokemon = pokemon.filter(p => {
     const matchesSearch = p.name.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesType = selectedType === 'all' || 
@@ -30,11 +30,11 @@ const Gallery = ({
     return matchesSearch && matchesType;
   });
 
-  // Para paginación de resultados filtrados
+ 
   const [filteredPage, setFilteredPage] = useState(1);
   const filteredItemsPerPage = 20;
   
-  // Calcular elementos para mostrar según el modo
+ 
   const itemsToShow = hasActiveFilters 
     ? filteredPokemon.slice(
         (filteredPage - 1) * filteredItemsPerPage,
@@ -48,7 +48,7 @@ const Gallery = ({
     'flying', 'bug', 'rock', 'ghost', 'steel', 'fighting', 'normal'
   ];
 
-  // Resetear páginas cuando cambian los filtros
+
   useEffect(() => {
     setCurrentPage(1);
     setFilteredPage(1);
@@ -71,7 +71,7 @@ const Gallery = ({
     setSelectedType(e.target.value);
   };
 
-  // Calcular información de paginación
+  
   const getCurrentPageInfo = () => {
     if (hasActiveFilters) {
       return {
@@ -144,7 +144,7 @@ const Gallery = ({
             </div>
           </div>
           
-          {/* Mostrar información de resultados */}
+          
           {hasActiveFilters && (
             <div className="results-info">
               <p className="text-white-50">
@@ -165,7 +165,7 @@ const Gallery = ({
           </div>
         ) : (
           <>
-            {/* Grid de Pokémon */}
+            
             <div className="pokemon-grid">
               {itemsToShow.length > 0 ? (
                 itemsToShow.map((poke) => (
@@ -192,7 +192,7 @@ const Gallery = ({
               )}
             </div>
 
-            {/* Paginación */}
+           
             {pageInfo.totalPages > 1 && (
               <div className="pagination-section">
                 <nav aria-label="Navegación de páginas">
