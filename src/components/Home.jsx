@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Card from './Card';
 import '../styles/Home.css';
+import { Link } from 'react-router-dom'
 
 const Home = ({ 
   title = "Bienvenido al Mundo Pokémon",
@@ -42,12 +43,12 @@ const Home = ({
             <h1 className="hero-title">{title}</h1>
             <p className="hero-subtitle">{subtitle}</p>
             <div className="hero-buttons">
-              <button className="btn btn-primary btn-lg me-3">
+              <Link to="/gallery" className="btn btn-primary btn-lg me-3">
                 Explorar Pokédex
-              </button>
-              <button className="btn btn-outline-light btn-lg">
+              </Link>
+              <Link to="/contact" className="btn btn-outline-light btn-lg">
                 Conoce Más
-              </button>
+              </Link>
             </div>
           </div>
         </div>

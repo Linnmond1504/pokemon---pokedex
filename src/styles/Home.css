@@ -7,7 +7,7 @@
 
 .hero-section {
   background: var(--gradient-pokemon);
-  padding: 8rem 2rem 6rem; 
+  padding: 17rem 2rem 17rem; 
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -63,6 +63,7 @@
 }
 
 .hero-buttons .btn {
+  background-color: #bdc7ff ;
   padding: 1rem 2.5rem; 
   font-size: 1.1rem;
   font-weight: 600;
@@ -74,6 +75,8 @@
 .hero-buttons .btn:hover {
   transform: translateY(-3px);
   box-shadow: var(--box-shadow-hover);
+  background-color: #a6afdf;
+  color: black;
 }
 
 

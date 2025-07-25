@@ -34,15 +34,15 @@ const Navbar = ({ brandName = "PokéDex" }) => {
 
  
   const navLinks = [
-    { path: '/', label: 'Inicio', icon: '🏠' },
-    { path: '/gallery', label: 'Pokédex', icon: '📚' },
-    { path: '/contact', label: 'Contacto', icon: '📧' }
+    { path: '/', label: ' Inicio  ', icon: '' },
+    { path: '/gallery', label: ' Pokédex  ', icon: '' },
+    { path: '/contact', label: ' Contacto  ', icon: '' }
   ];
 
   return (
     <nav className={`navbar-enhanced ${isScrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
-        {/* Brand */}
+        
         <Link className="navbar-brand-enhanced" to="/">
           <div className="brand-content">
             <span className="brand-icon-enhanced">⚡</span>

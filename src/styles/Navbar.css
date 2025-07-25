@@ -1,7 +1,7 @@
 
 
 :root {
-  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --primary-gradient: linear-gradient(135deg, #1b254c 0%, #1b254c 100%);
   --pokemon-yellow: #ffcb05;
   --pokemon-red: #ef4444;
   --shadow-light: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -27,7 +27,7 @@
 
 .navbar-enhanced.scrolled {
   min-height: 70px;
-  background: rgba(102, 126, 234, 0.95);
+  background: #233063d3;
   box-shadow: var(--shadow-dark);
 }
 
@@ -111,18 +111,22 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  color: white;
+  
 }
 
 .nav-link {
-  display: flex;
+  display: flex !important;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.8rem 1.2rem;
-  color: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  color: rgb(255, 255, 255);
   text-decoration: none;
   border-radius: 12px;
   font-weight: 500;
   font-size: 0.95rem;
+  min-width: 100px;
+  justify-content: center;
   position: relative;
   transition: var(--transition-smooth);
   overflow: hidden;
@@ -145,7 +149,7 @@
 
 .nav-link:hover {
   color: white;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.426);
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
