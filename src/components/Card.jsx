@@ -1,4 +1,4 @@
-// src/components/Card.jsx
+
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 import '../styles/Card.css';
@@ -84,7 +84,7 @@ const Card = ({
           </div>
         </div>
 
-        {/* Reverso de la tarjeta */}
+        
         {showDetails && (
           <div className="card-back">
             <div className="card-body">

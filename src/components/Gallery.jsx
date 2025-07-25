@@ -1,4 +1,4 @@
-// src/components/Gallery.jsx
+
 import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Card from './Card';

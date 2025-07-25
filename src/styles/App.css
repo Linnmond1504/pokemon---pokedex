@@ -1,6 +1,5 @@
 
 
-/* Variables CSS globales */
 :root {
   --primary-color: #3b82f6;
   --secondary-color: #f59e0b;
@@ -26,7 +25,7 @@
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Reset básico */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -53,7 +52,7 @@ main {
   width: 100%;
 }
 
-/* Clases utilitarias */
+
 .text-gradient {
   background: var(--gradient-primary);
   -webkit-background-clip: text;
@@ -77,7 +76,6 @@ main {
   color: white;
 }
 
-/* Animaciones */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -129,7 +127,7 @@ main {
   animation: slideIn 0.6s ease-out;
 }
 
-/* Loader de pokeball */
+
 .pokeball-loader {
   width: 60px;
   height: 60px;
@@ -198,7 +196,7 @@ main {
 
 
 
-/* Mejoras en accesibilidad */
+
 .sr-only {
   position: absolute;
   width: 1px;

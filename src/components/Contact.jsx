@@ -1,4 +1,4 @@
-// src/components/Contact.jsx
+
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 import '../styles/Contact.css';
@@ -7,7 +7,7 @@ const Contact = ({
   title = "Contáctanos",
   subtitle = "¿Tienes preguntas sobre Pokémon? ¡Escríbenos!" 
 }) => {
-  // Estados para el formulario
+  
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -27,7 +27,7 @@ const Contact = ({
       [name]: value
     }));
     
-    // Limpiar error cuando el usuario empiece a escribir
+
     if (errors[name]) {
       setErrors(prev => ({
         ...prev,
@@ -36,7 +36,7 @@ const Contact = ({
     }
   };
 
-  // Validar formulario
+
   const validateForm = () => {
     const newErrors = {};
 
@@ -63,7 +63,7 @@ const Contact = ({
     return newErrors;
   };
 
-  // Manejar envío del formulario
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     

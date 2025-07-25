@@ -1,4 +1,4 @@
-/* src/styles/Navbar.css - Versión Simplificada */
+
 
 :root {
   --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -35,7 +35,7 @@
   transform: scale(0.9);
 }
 
-/* Container */
+
 .navbar-container {
   max-width: 1400px;
   margin: 0 auto;
@@ -90,7 +90,6 @@
   font-style: italic;
 }
 
-/* Barra de progreso */
 .scroll-progress {
   position: absolute;
   bottom: 0;
@@ -107,7 +106,7 @@
   border-radius: 0 3px 3px 0;
 }
 
-/* Navigation Desktop */
+
 .navbar-nav-desktop {
   display: flex;
   align-items: center;
@@ -182,7 +181,7 @@
   transform: scale(1.2);
 }
 
-/* Actions */
+
 .navbar-actions {
   display: flex;
   align-items: center;
@@ -349,7 +348,7 @@
   .brand-content {
     margin-right: 0;
   }
-  
+
   .brand-text {
     font-size: 1.4rem;
   }

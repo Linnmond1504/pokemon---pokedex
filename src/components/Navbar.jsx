@@ -1,4 +1,4 @@
-// src/components/Navbar.jsx - Versión Simplificada
+
 import { Link, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';

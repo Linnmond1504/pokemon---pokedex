@@ -190,9 +190,9 @@
 }
 
 .spinner {
-  width: 60px; /* CORREGIDO: Aumentado tamaño */
+  width: 60px; 
   height: 60px;
-  border: 6px solid rgba(255,255,255,0.3); /* CORREGIDO: Aumentado grosor */
+  border: 6px solid rgba(255,255,255,0.3); 
   border-top: 6px solid #ffcb05;
   border-radius: 50%;
   animation: spin 1s linear infinite;
@@ -203,7 +203,7 @@
   100% { transform: rotate(360deg); }
 }
 
-/* NUEVO: Estilos para mensaje de error */
+
 .error-message {
   text-align: center;
   color: white;
@@ -221,11 +221,11 @@
   opacity: 0.9;
 }
 
-/* NUEVO: Estilos para "No results" */
+
 .no-results {
   text-align: center;
   padding: 4rem 2rem;
-  grid-column: 1 / -1; /* Ocupar toda la fila del grid */
+  grid-column: 1 / -1; 
 }
 
 .no-results h3 {
@@ -237,7 +237,7 @@
   font-size: 1.1rem;
 }
 
-/* NUEVO: Estilos mejorados para paginación */
+
 .pagination-section {
   margin-top: 4rem;
   padding: 2rem 0;

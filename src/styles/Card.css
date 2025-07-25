@@ -1,4 +1,4 @@
-/* src/styles/Card.css */
+
 
 .pokemon-card {
   width: 100%;
@@ -50,7 +50,7 @@
   border-color: var(--primary-color);
 }
 
-/* Card Header */
+
 .card-header {
   background: var(--gradient-primary);
   padding: 1rem;
@@ -114,7 +114,7 @@
   text-transform: capitalize;
 }
 
-/* Pokemon Types */
+
 .pokemon-types {
   display: flex;
   gap: 0.5rem;
@@ -224,14 +224,14 @@
   transition: transform 0.1s ease;
 }
 
-/* Mejorar la respuesta visual al clic */
+
 .pokemon-card:hover .card-front,
 .pokemon-card:hover .card-back {
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
   border-color: var(--primary-color);
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
   .pokemon-card {
     height: 320px;
@@ -269,8 +269,7 @@
     width: 90px;
     height: 90px;
   }
-  
-  /* En móvil, hacer el efecto hover menos pronunciado */
+
   .pokemon-card:hover {
     transform: translateY(-5px) scale(1.01);
   }

@@ -1,4 +1,4 @@
-// src/components/Footer.jsx - Versión Simplificada
+
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import '../styles/Footer.css';
@@ -9,7 +9,7 @@ const Footer = ({
   developer = "Tu Nombre",
   university = "Universidad/Instituto"
 }) => {
-  // Enlaces sociales
+ 
   const socialLinks = [
     { 
       name: 'GitHub', 
@@ -37,14 +37,13 @@ const Footer = ({
     }
   ];
 
-  // Enlaces rápidos
+ 
   const quickLinks = [
     { name: 'Inicio', href: '/', icon: '🏠' },
     { name: 'Pokédex', href: '/gallery', icon: '📚' },
     { name: 'Contacto', href: '/contact', icon: '📧' }
   ];
 
-  // Información técnica
   const techInfo = [
     { label: 'React', value: '18+', icon: '⚛️' },
     { label: 'Vite', value: '4.0', icon: '⚡' },
@@ -52,7 +51,7 @@ const Footer = ({
     { label: 'API', value: 'PokéAPI', icon: '🔌' }
   ];
 
-  // Scroll hacia arriba
+ 
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -62,17 +61,17 @@ const Footer = ({
 
   return (
     <footer className="footer-enhanced">
-      {/* Scroll to Top Button */}
+ 
       <button className="scroll-to-top" onClick={scrollToTop} aria-label="Scroll to top">
         <span className="scroll-icon">🚀</span>
       </button>
 
       <div className="footer-container-enhanced">
-        {/* Main Content */}
+        
         <div className="footer-main">
           <div className="footer-grid">
             
-            {/* Brand Section */}
+          
             <div className="footer-section brand-section">
               <div className="footer-brand-enhanced">
                 <div className="brand-logo-enhanced">
@@ -89,7 +88,7 @@ const Footer = ({
                   tus Pokémon favoritos.
                 </p>
 
-                {/* Social Links */}
+        
                 <div className="social-section">
                   <h4 className="social-title">Síguenos</h4>
                   <div className="social-links-enhanced">
@@ -112,7 +111,7 @@ const Footer = ({
               </div>
             </div>
 
-            {/* Quick Links */}
+     
             <div className="footer-section links-section">
               <h4 className="section-title">
                 <span className="section-icon">🚀</span>
@@ -131,7 +130,7 @@ const Footer = ({
               </ul>
             </div>
 
-            {/* Tech Info */}
+  
             <div className="footer-section tech-section">
               <h4 className="section-title">
                 <span className="section-icon">⚙️</span>
@@ -152,7 +151,6 @@ const Footer = ({
           </div>
         </div>
 
-        {/* Footer Bottom */}
         <div className="footer-bottom-enhanced">
           <div className="footer-bottom-content">
             <div className="copyright-section">
@@ -176,7 +174,7 @@ const Footer = ({
             </div>
           </div>
           
-          {/* Bottom Animation */}
+          
           <div className="footer-wave">
             <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
               <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"></path>

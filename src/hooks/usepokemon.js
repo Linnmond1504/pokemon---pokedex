@@ -1,4 +1,4 @@
-// src/hooks/usePokemon.js
+
 import { useState, useEffect } from 'react';
 
 const usePokemon = (page = 1, limit = 20, loadAll = false) => {
@@ -15,14 +15,14 @@ const usePokemon = (page = 1, limit = 20, loadAll = false) => {
         setError(null);
         
         if (loadAll) {
-          // Cargar todos los Pokémon para filtros (solo primera vez)
+   
           if (allPokemon.length === 0) {
             // Primero obtener el count total
             const countResponse = await fetch('https://pokeapi.co/api/v2/pokemon?limit=1');
             const countData = await countResponse.json();
             setTotalCount(countData.count);
             
-            // Cargar todos los Pokémon (limitamos a 1010 para evitar problemas de rendimiento)
+           
             const maxPokemon = Math.min(countData.count, 1010);
             const listResponse = await fetch(
               `https://pokeapi.co/api/v2/pokemon?limit=${maxPokemon}&offset=0`
@@ -34,7 +34,7 @@ const usePokemon = (page = 1, limit = 20, loadAll = false) => {
             
             const listData = await listResponse.json();
             
-            // Obtener detalles de todos los Pokémon (esto puede tardar)
+        
             const pokemonDetailsPromises = listData.results.map(async (pokemon) => {
               const response = await fetch(pokemon.url);
               if (!response.ok) {
@@ -47,11 +47,11 @@ const usePokemon = (page = 1, limit = 20, loadAll = false) => {
             setAllPokemon(pokemonDetails);
             setPokemon(pokemonDetails);
           } else {
-            // Si ya tenemos todos los Pokémon, solo los asignamos
+         
             setPokemon(allPokemon);
           }
         } else {
-          // Carga paginada normal
+         
           const offset = (page - 1) * limit;
           
           const listResponse = await fetch(
