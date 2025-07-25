@@ -2,6 +2,6 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
+  base: '/pokemon---pokedex/',
   plugins: [react()],
-  base: '/pokemon---pokedex/', // el nombre del repo va entre barras
 })
