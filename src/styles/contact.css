@@ -1,8 +1,8 @@
 
 .contact-container {
   min-height: 100vh;
-  background: linear-gradient(135deg, #dbeafe 0%, #f3e8ff 50%, #fce7f3 100%);
-  padding: 5rem 0 3rem 0;
+  background: linear-gradient(135deg, #F7CB2A 0%, #e0af11 50%, #F7CB2A 100%);
+  padding: 8rem 0 2rem 0;
 }
 
 .contact-wrapper {
@@ -37,17 +37,19 @@
 }
 
 .contact-icon.electric {
-  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+   background: linear-gradient(135deg, #bb2222, #a41e61);
+  border: black 2px solid;
 }
 
 .contact-icon.pokeball {
-  background: linear-gradient(135deg, #f87171, #ec4899);
+  background: linear-gradient(135deg, #bb2222, #a41e61);
+  border: black 2px solid;
 }
 
 .contact-title {
   font-size: 2.25rem;
   font-weight: 700;
-  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  background: linear-gradient(135deg, #111c48, #111A3E);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -55,7 +57,7 @@
 
 .contact-subtitle {
   font-size: 1.125rem;
-  color: #4b5563;
+  color: #2f3339;
   max-width: 32rem;
   margin: 0 auto;
   line-height: 1.75;
@@ -98,13 +100,14 @@
 .form-content {
   position: relative;
   z-index: 10;
+  
 }
 
 
 .success-message {
   margin-bottom: 1.5rem;
   padding: 1rem;
-  background: linear-gradient(135deg, #34d399, #059669);
+  background: linear-gradient(135deg, #29cd73, #059669);
   color: white;
   border-radius: 1rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -131,6 +134,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+     
 }
 
 .form-label {
@@ -161,6 +165,8 @@
   transition: all 0.3s ease;
   font-size: 1rem;
   outline: none;
+  background-color: whitesmoke;
+  color: black;
 }
 
 .form-input:focus,
@@ -170,19 +176,25 @@
 }
 
 .form-input:focus { 
-  border-color: #60a5fa; 
+  border-color: #F7CB2A; 
   background-color: rgba(147, 197, 253, 0.1);
 }
 
 .form-select:focus { 
-  border-color: #f59e0b; 
+  border-color: #F7CB2A; 
   background-color: rgba(251, 191, 36, 0.1);
 }
 
 .form-textarea:focus { 
-  border-color: #34d399; 
-  background-color: rgba(52, 211, 153, 0.1);
+  border-color: #F7CB2A; 
+  background-color: rgba(203, 211, 52, 0.1);
 }
+
+
+
+
+
+
 
 /* Estados de error */
 .form-input.error,
@@ -215,9 +227,16 @@
 
 .counter-text {
   font-size: 0.875rem;
-  color: #6b7280;
+  color: #0f3278;
   margin-left: auto;
 }
+
+
+
+
+
+
+
 
 /* Botones */
 .form-buttons {
@@ -239,6 +258,7 @@
   cursor: pointer;
   transition: all 0.3s ease;
   font-size: 1rem;
+  color: white;
 }
 
 .btn:hover {
@@ -254,12 +274,12 @@
 
 .btn-submit {
   flex: 1;
-  background: linear-gradient(135deg, #3b82f6, #7c3aed);
+  background: linear-gradient(135deg, #112573, #111A3E);
   color: white;
 }
 
 .btn-submit:hover:not(:disabled) {
-  background: linear-gradient(135deg, #2563eb, #6d28d9);
+  background: linear-gradient(135deg, #112573, #111A3E);
 }
 
 .btn-reset {
@@ -270,6 +290,9 @@
 .btn-reset:hover:not(:disabled) {
   background: linear-gradient(135deg, #6b7280, #4b5563);
 }
+
+
+
 
 /* Spinner de carga */
 .loading-spinner {

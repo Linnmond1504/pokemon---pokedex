@@ -5,7 +5,7 @@ import '../styles/Contact.css';
 
 const Contact = ({ 
   title = "Contáctanos",
-  subtitle = "¿Tienes preguntas sobre Pokémon? ¡Escríbenos!" 
+  subtitle = "¿Tienes preguntas sobre Pokémon? ¡Escríbinos!" 
 }) => {
   
   const [formData, setFormData] = useState({
@@ -19,7 +19,7 @@ const Contact = ({
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState('');
 
-  // Manejar cambios en los inputs
+ 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -107,7 +107,7 @@ const Contact = ({
   return (
     <div className="contact-container">
       <div className="contact-wrapper">
-        {/* Header mejorado */}
+  
         <div className="contact-header">
           <div className="contact-title-container">
             <div className="contact-icon electric"></div>
@@ -117,14 +117,14 @@ const Contact = ({
           <p className="contact-subtitle">{subtitle}</p>
         </div>
 
-        {/* Contenedor del formulario*/}
+      
         <div className="contact-form-container">
-          {/* Decoración sutil */}
+         
           <div className="decoration-top"></div>
           <div className="decoration-bottom"></div>
           
           <div className="form-content">
-            {/* Mensaje de confirmación*/}
+          
             {submitMessage && (
               <div className="success-message">
                 <span>{submitMessage}</span>
@@ -133,7 +133,7 @@ const Contact = ({
 
             <form onSubmit={handleSubmit}>
               <div className="form-fields">
-                {/* Fila de nombre y email */}
+              
                 <div className="form-row">
                   <div className="form-group">
                     <label htmlFor="name" className="form-label">

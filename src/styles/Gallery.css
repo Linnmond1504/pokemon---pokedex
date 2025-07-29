@@ -1,13 +1,13 @@
-/* src/styles/Gallery.css */
+
 .gallery-section {
-  padding: 6rem 2rem; /* CORREGIDO: Aumentado padding */
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 6rem 2rem; 
+  background: linear-gradient(135deg, #182b83 0%, #111A3E 100%);
   min-height: 100vh;
   width: 100%;
 }
 
 .gallery-container {
-  max-width: 1400px; /* CORREGIDO: Aumentado ancho máximo */
+  max-width: 1400px; 
   margin: 0 auto;
   padding: 0 2rem;
 }
@@ -17,11 +17,11 @@
   color: white;
   font-size: 2.5rem;
   font-weight: 700;
-  margin-bottom: 4rem; /* CORREGIDO: Aumentado margen */
+  margin-bottom: 4rem; 
   text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
-/* NUEVO: Estilos para la sección de filtros */
+
 .filters-section {
   margin-bottom: 3rem;
 }
@@ -60,7 +60,7 @@
   transform: translateY(-2px);
 }
 
-/* NUEVO: Información de resultados */
+
 .results-info {
   text-align: center;
   margin-bottom: 2rem;
@@ -100,27 +100,27 @@
 
 .pokemon-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* CORREGIDO: Aumentado tamaño mínimo */
-  gap: 2.5rem; /* CORREGIDO: Aumentado gap */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  gap: 2.5rem; 
   margin-top: 2rem;
-  padding: 1rem 0; /* CORREGIDO: Añadido padding */
+  padding: 1rem 0; 
 }
 
 .pokemon-item {
   background: rgba(255,255,255,0.95);
   border-radius: 20px;
-  padding: 2rem; /* CORREGIDO: Aumentado padding */
+  padding: 2rem; 
   text-align: center;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255,255,255,0.2);
   cursor: pointer;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.1); /* CORREGIDO: Añadida sombra base */
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1); 
 }
 
 .pokemon-item:hover {
   transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15); /* CORREGIDO: Mejorada sombra hover */
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15); 
 }
 
 .pokemon-image {
@@ -144,7 +144,7 @@
 .pokemon-name {
   font-size: 1.3rem;
   font-weight: 600;
-  color: #333;
+  color: #ffffff;
   margin-bottom: 0.5rem;
   text-transform: capitalize;
 }
@@ -160,7 +160,7 @@
   color: white;
 }
 
-/* Tipos de Pokémon con colores específicos */
+
 .type-fire { background: #ff6b6b; }
 .type-water { background: #74b9ff; }
 .type-grass { background: #55efc4; }
@@ -185,8 +185,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 300px; /* CORREGIDO: Aumentada altura */
-  padding: 3rem; /* CORREGIDO: Añadido padding */
+  height: 300px; 
+  padding: 3rem; 
 }
 
 .spinner {
@@ -284,7 +284,22 @@
   cursor: not-allowed;
 }
 
-/* Responsive Design */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 768px) {
   .gallery-section {
     padding: 4rem 1rem;

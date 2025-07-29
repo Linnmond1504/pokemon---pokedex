@@ -64,6 +64,7 @@
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
+
 /* imagen de pokemon */
 .pokemon-image-container {
   padding: 1.5rem;
@@ -109,7 +110,7 @@
 .pokemon-name {
   font-size: 1.4rem;
   font-weight: 700;
-  color: var(--dark-color);
+  color: white;
   margin-bottom: 1rem;
   text-transform: capitalize;
 }
@@ -214,7 +215,7 @@
 }
 */
 
-/* NUEVO: Efecto hover más simple y confiable */
+
 .pokemon-card:hover {
   transform: translateY(-10px) scale(1.02);
 }

@@ -47,7 +47,6 @@ const Footer = ({
   const techInfo = [
     { label: 'React', value: '18+', icon: '⚛️' },
     { label: 'Vite', value: '4.0', icon: '⚡' },
-    { label: 'Router', value: 'v6', icon: '🛣️' },
     { label: 'API', value: 'PokéAPI', icon: '🔌' }
   ];
 
@@ -165,7 +164,7 @@ const Footer = ({
             <div className="footer-meta">
               <div className="meta-item">
                 <span className="meta-icon">🌐</span>
-                <span className="meta-text">Hecho con ❤️ en React</span>
+                <span className="meta-text">Hecho con React por Benitez Mateo</span>
               </div>
               <div className="meta-item">
                 <span className="meta-icon">🔄</span>

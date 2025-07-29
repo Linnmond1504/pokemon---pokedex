@@ -1,6 +1,6 @@
 
 :root {
-  --footer-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --footer-gradient: linear-gradient(135deg, #111A3E 0%, #111A3E 100%);
   --pokemon-yellow: #ffcb05;
   --pokemon-blue: #3b82f6;
   --pokemon-red: #ef4444;
@@ -418,6 +418,26 @@
 .footer-wave path {
   fill: rgba(255, 255, 255, 0.05);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Animaciones */
 @keyframes slideInUp {

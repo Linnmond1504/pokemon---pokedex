@@ -50,7 +50,7 @@ const Card = ({
   return (
     <div className={`pokemon-card ${isFlipped ? 'flipped' : ''}`} onClick={handleFlip}>
       <div className="card-inner">
-        {/* Frente de la tarjeta */}
+        
         <div className="card-front">
           <div className="card-header">
             <span className="pokemon-id">#{String(id).padStart(3, '0')}</span>

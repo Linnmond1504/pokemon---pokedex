@@ -191,7 +191,10 @@
   align-items: center;
 }
 
-/* Mobile Menu Toggle */
+
+
+
+
 .mobile-menu-toggle {
   display: none;
   flex-direction: column;
@@ -226,6 +229,9 @@
 .mobile-menu-toggle.active .hamburger-line:nth-child(3) {
   transform: rotate(-45deg) translate(6px, -6px);
 }
+
+
+
 
 /* menu celular */
 .mobile-menu {
@@ -324,7 +330,7 @@
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Overlay */
+
 .mobile-menu-overlay {
   position: fixed;
   top: 0;
@@ -336,7 +342,11 @@
   backdrop-filter: blur(5px);
 }
 
-/* Responsive */
+
+
+
+
+
 @media (max-width: 768px) {
   .navbar-container {
     padding: 0 1rem;
